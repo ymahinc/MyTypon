@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ZoomTool</class>
+ <widget class="QWidget" name="ZoomTool">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>218</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QFormLayout" name="formLayout">
+       <item row="0" column="0">
+        <widget class="QPushButton" name="zoomInPushButton">
+         <property name="text">
+          <string>Zoom In</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../../mytypon.qrc">
+           <normaloff>:/pictures/zoom_in.png</normaloff>:/pictures/zoom_in.png</iconset>
+         </property>
+         <property name="autoRepeat">
+          <bool>true</bool>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QPushButton" name="zoomOutPushButton">
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="text">
+          <string>Zoom Out</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../../mytypon.qrc">
+           <normaloff>:/pictures/zoom_out.png</normaloff>:/pictures/zoom_out.png</iconset>
+         </property>
+         <property name="autoRepeat">
+          <bool>true</bool>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QPushButton" name="zoomResetPushButton">
+         <property name="text">
+          <string>Zoom Reset</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../../mytypon.qrc">
+           <normaloff>:/pictures/zoom_actual.png</normaloff>:/pictures/zoom_actual.png</iconset>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QPushButton" name="zoomBoardPushButton">
+         <property name="text">
+          <string>Zoom to typon board</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../../mytypon.qrc">
+           <normaloff>:/pictures/zoom_fit.png</normaloff>:/pictures/zoom_fit.png</iconset>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QPushButton" name="zoomFitPushButton">
+         <property name="text">
+          <string>Zoom fit in view</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../../mytypon.qrc">
+           <normaloff>:/pictures/zoom_extend.png</normaloff>:/pictures/zoom_extend.png</iconset>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QPushButton" name="zoomSelectionPushButton">
+         <property name="text">
+          <string>Zoom selection</string>
+         </property>
+         <property name="icon">
+          <iconset resource="../../mytypon.qrc">
+           <normaloff>:/pictures/zoom_selection.png</normaloff>:/pictures/zoom_selection.png</iconset>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="verticalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../../mytypon.qrc"/>
+ </resources>
+ <connections/>
+</ui>

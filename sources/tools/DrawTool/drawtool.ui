@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DrawTool</class>
+ <widget class="QWidget" name="DrawTool">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>198</width>
+    <height>159</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QStackedWidget" name="stackedWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="page">
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QTableWidget" name="tableWidget">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <property name="sizeAdjustPolicy">
+          <enum>QAbstractScrollArea::AdjustToContents</enum>
+         </property>
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
+         </property>
+         <property name="alternatingRowColors">
+          <bool>false</bool>
+         </property>
+         <property name="selectionMode">
+          <enum>QAbstractItemView::NoSelection</enum>
+         </property>
+         <property name="cornerButtonEnabled">
+          <bool>false</bool>
+         </property>
+         <attribute name="horizontalHeaderVisible">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="horizontalHeaderDefaultSectionSize">
+          <number>60</number>
+         </attribute>
+         <attribute name="horizontalHeaderStretchLastSection">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="verticalHeaderVisible">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="verticalHeaderDefaultSectionSize">
+          <number>24</number>
+         </attribute>
+         <attribute name="verticalHeaderMinimumSectionSize">
+          <number>24</number>
+         </attribute>
+         <attribute name="verticalHeaderStretchLastSection">
+          <bool>false</bool>
+         </attribute>
+         <row>
+          <property name="text">
+           <string>Name</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>Size</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>Type</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>FillType</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>Offset</string>
+          </property>
+         </row>
+         <column>
+          <property name="text">
+           <string>Propertie</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Value</string>
+          </property>
+         </column>
+         <item row="0" column="0">
+          <property name="text">
+           <string>Name</string>
+          </property>
+         </item>
+         <item row="1" column="0">
+          <property name="text">
+           <string>Type</string>
+          </property>
+         </item>
+         <item row="2" column="0">
+          <property name="text">
+           <string>Width</string>
+          </property>
+         </item>
+         <item row="3" column="0">
+          <property name="text">
+           <string>FillType</string>
+          </property>
+         </item>
+         <item row="4" column="0">
+          <property name="text">
+           <string>Offset</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="page_2">
+      <widget class="MYUnitsSpinBox" name="groundPlaneOffsetSpinBox">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>108</x>
+         <y>96</y>
+         <width>53</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="frame">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="MYUnitsSpinBox" name="widthSpinBox">
+       <property name="geometry">
+        <rect>
+         <x>108</x>
+         <y>122</y>
+         <width>53</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="frame">
+        <bool>false</bool>
+       </property>
+       <property name="value">
+        <double>25.000000000000000</double>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="fillTypeComboBox">
+       <property name="geometry">
+        <rect>
+         <x>108</x>
+         <y>68</y>
+         <width>110</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QComboBox { background-color: white; } </string>
+       </property>
+       <property name="frame">
+        <bool>false</bool>
+       </property>
+       <item>
+        <property name="text">
+         <string>No fill</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../../mytypon.qrc">
+          <normaloff>:/pictures/nofilled.png</normaloff>:/pictures/nofilled.png</iconset>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Full fill</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../../mytypon.qrc">
+          <normaloff>:/pictures/fullfilled.png</normaloff>:/pictures/fullfilled.png</iconset>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Ground plane</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../../mytypon.qrc">
+          <normaloff>:/pictures/groundplane.png</normaloff>:/pictures/groundplane.png</iconset>
+        </property>
+       </item>
+      </widget>
+      <widget class="QComboBox" name="typeComboBox">
+       <property name="geometry">
+        <rect>
+         <x>108</x>
+         <y>40</y>
+         <width>94</width>
+         <height>22</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QComboBox { background-color: white; } </string>
+       </property>
+       <property name="frame">
+        <bool>false</bool>
+       </property>
+       <item>
+        <property name="text">
+         <string>Rectangle</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../../mytypon.qrc">
+          <normaloff>:/pictures/button.png</normaloff>:/pictures/button.png</iconset>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Polygon</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../../mytypon.qrc">
+          <normaloff>:/pictures/draw_polyline.png</normaloff>:/pictures/draw_polyline.png</iconset>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Ellipse</string>
+        </property>
+        <property name="icon">
+         <iconset resource="../../mytypon.qrc">
+          <normaloff>:/pictures/draw_ellipse.png</normaloff>:/pictures/draw_ellipse.png</iconset>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLineEdit" name="nameLineEdit">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>10</y>
+         <width>113</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="frame">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>MYUnitsSpinBox</class>
+   <extends>QDoubleSpinBox</extends>
+   <header>utils/myunitsspinbox.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../../mytypon.qrc"/>
+ </resources>
+ <connections/>
+</ui>

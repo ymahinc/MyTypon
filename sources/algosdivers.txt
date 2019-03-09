@@ -1,0 +1,92 @@
+// closest2D_Point_to_Line(): find the closest 2D Point to a Line
+//     Input:  an array P[] of n points, and a Line L
+//     Return: the index i of the Point P[i] closest to L
+int
+closest2D_Point_to_Line( Point P[], int n, Line L)
+{
+     // Get coefficients of the implicit line equation.
+     // Do NOT normalize since scaling by a constant
+     // is irrelevant for just comparing distances.
+     float a = L.P0.y - L.P1.y;
+     float b = L.P1.x - L.P0.x;
+     float c = L.P0.x * L.P1.y - L.P1.x * L.P0.y;
+
+     // initialize min index and distance to P[0]
+     int mi = 0;
+     float min = a * P[0].x + b * P[0].y + c;
+     if (min < 0) min = -min;     // absolute value
+
+     // loop through Point array testing for min distance to L
+     for (i=1; i<n; i++) {
+          // just use dist squared (sqrt not  needed for comparison)
+          float dist = a * P[i].x + b * P[i].y  + c;
+          if (dist < 0) dist = -dist;    // absolute value
+          if (dist < min) {      // this point is closer
+               mi = i;              // so have a new minimum
+               min = dist;
+          }
+     }
+     return mi;     // the index of the closest  Point P[mi]
+}
+//===================================================================
+
+
+MYItemBase Rotate:
+
+/* double determinant = transform().determinant();
+ angle *= determinant;
+
+ QTransform t;
+ t.translate(center.x(),center.y());
+ t.rotate(angle);
+ t.translate(-center.x(),-center.y());
+ if ( determinant > 0)
+     setPos(t.map(pos()));
+ else
+     setPos(t.inverted().map(pos()));
+ setRotation(rotation() + angle);*/
+
+MYItemBase horizontal Mirror:
+/* OK OK OK
+if ( determinant < 0 )
+    t.translate(-mappedCenter.x()*determinant, -mappedCenter.y());
+else
+    t.translate(mappedCenter.x()*determinant, mappedCenter.y());
+t.scale(-1,1);
+if ( determinant < 0 )
+    t.translate(mappedCenter.x()*determinant, mappedCenter.y());
+else
+    t.translate(-mappedCenter.x()*determinant, -mappedCenter.y());
+
+if ( determinant )
+    setTransform(t*transform());
+else
+   setTransform(t.inverted()*transform());
+   */
+
+/* OK sans rotation
+ *
+ *  if ( determinant < 0 ){
+    t.translate(-mappedCenter.x()*determinant, 0);
+    t.translate(-mappedCenter.x()*determinant, 0);
+    t.translate(-mappedCenter.x()*determinant, 0);
+    t.translate(-mappedCenter.x()*determinant, 0);
+}
+t.translate(mappedCenter.x()*determinant, mappedCenter.y());
+t.scale(-1,1);
+t.translate(-mappedCenter.x()*determinant, -mappedCenter.y());
+
+if ( determinant )
+    setTransform(t*transform());
+else
+   setTransform(t.inverted()*transform());
+
+   */
+/*
+qDebug() << "-------------------------";
+qDebug() << center;
+qDebug() << determinant << transform().isRotating() << transform().isScaling();
+qDebug() << "hscale: " << transform().m11();
+qDebug() << "vscale: "  << transform().m22();
+qDebug() << "hshear: " << transform().m21();
+qDebug() << "vshear: "  << transform().m12();*/

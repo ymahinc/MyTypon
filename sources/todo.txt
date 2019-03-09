@@ -1,0 +1,23 @@
+ground planes
+
+cursor qd autoexpand et qu'on sort de la fenetre
+
+pb qd auto expand et clic sur fermer ou autre tool => Plante au imeux
+
+qd pad is via => Group => change layer => Ungroup tjrs marque via mais fonctionne plus
+
+qd edit track => si curve et qu'on change width devient flat
+
+merge track de 2 layers differents
+
+// Prochaines releases
+bus
+splashscreen
+traduction
+aide
+scan
+board a choisir
+test tool
+Full screen
+NetList
+AutoRouteur
